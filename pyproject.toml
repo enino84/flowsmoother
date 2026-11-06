@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flowsmoother"
+version = "0.1.0"
+description = "Ensemble Kalman smoother with a modified-Cholesky precision whose cross-time structure is dictated by the flow"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Elias D. Nino-Ruiz" }]
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "swesphere==0.6.0",
+    "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["model: needs the swesphere model (slower)"]

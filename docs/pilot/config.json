@@ -1,0 +1,93 @@
+{
+ "scale": 0.05,
+ "t1_days": 2.0,
+ "t2_days": 2.0,
+ "obs_sigma_m": 6.0,
+ "width": 2,
+ "max_cells": 40.0,
+ "alpha_clim": 0.1,
+ "letks_tapers": [
+  "box",
+  "gc"
+ ],
+ "letks_radii": [
+  3,
+  4,
+  6,
+  8,
+  10,
+  14
+ ],
+ "structs": [
+  "square",
+  "wake",
+  "patch",
+  "wake50",
+  "patch50"
+ ],
+ "prior_structs": [
+  "square",
+  "wake"
+ ],
+ "priors": [
+  "full"
+ ],
+ "alphas": [
+  0.003,
+  0.03,
+  0.3
+ ],
+ "alphas_prior": [
+  0.03,
+  0.3,
+  3.0
+ ],
+ "save_arms": [
+  "letks-gc-r8",
+  "enks-square-r2-a0.003-off",
+  "enks-wake-r2-a0.003-off",
+  "enks-patch-r2-a0.003-off",
+  "enks-square-r2-a0.3-full",
+  "enks-wake-r2-a0.3-full"
+ ],
+ "gallery_density": 0.1,
+ "n_ref": 200,
+ "lat_north": 63.0,
+ "lat_south": -60.5,
+ "seeds": [
+  0,
+  1,
+  2,
+  3,
+  4
+ ],
+ "N": [
+  20
+ ],
+ "lags": [
+  6,
+  12,
+  24
+ ],
+ "dens": [
+  0.1
+ ],
+ "radii": [
+  2
+ ],
+ "gallery_seed": 0,
+ "clim_dir": "/home/claude/flowsmoother/results/clim",
+ "record_id": "455a8c5a20",
+ "cache_dir": "/home/claude/flowsmoother/results/clim/centres",
+ "model_workers": 1,
+ "preset": "pilot",
+ "versions": {
+  "python": "3.13.18",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "pyshtools": "4.14.1",
+  "swesphere": "0.6.0",
+  "matplotlib": "3.11.2",
+  "flowsmoother": "0.1.0"
+ }
+}

@@ -1,0 +1,15 @@
+# docker compose build
+# docker compose run --rm fs test
+# docker compose run --rm fs quick        (smoke test of everything, about 9 minutes)
+# WORKERS=16 docker compose run --rm fs pilot
+services:
+  fs:
+    build: .
+    image: flowsmoother:0.1.0
+    user: "${UID:-1000}:${GID:-1000}"
+    environment:
+      WORKERS: "${WORKERS:-}"
+      QUICK: "${QUICK:-0}"
+    volumes:
+      - ./results:/app/results
+    shm_size: "1gb"

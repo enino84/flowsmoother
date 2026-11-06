@@ -1,0 +1,8 @@
+# Versions the repository was tested with (Python 3.13).
+numpy==2.5.3
+scipy==1.18.1
+pyshtools==4.14.1
+swesphere==0.6.0
+matplotlib==3.11.2
+pillow
+pytest
